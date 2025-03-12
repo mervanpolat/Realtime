@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-chat-room {
+    width: 95vw;
+    height: 95vh;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling of area where the user registers */
+
+#login-page {
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+    border: 2px solid black;
+}
+
+#login-page-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+
+}
+
+#input-username {
+    margin-bottom: 10px;
+    border: 5px solid white;
+    background: rgba(255,255,255,0.5);
+    padding: 15px;
+}
+
+#send-username-btn {
+    display: block;
+    margin: auto;
+    border-radius: 20%;
+    border: none;
+    padding: 3px;
+    background-color: #555555;
+    color: white;
+    cursor: pointer;
+}
+
+#existent-username-alert {
+    font-size: xx-small;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    color: red;
+}
+
+/* Styling of area where users are shown */
+
+#users-and-button {
+    flex-basis: 25vw;
+}
+
+#users {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(128, 128, 128, 0.2);
+    height: 82.5vh;
+    overflow-y: scroll;
+}
+
+.user-container {
+    border-bottom: 2px solid rgb(128, 128, 128, 0.2);
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user {
+    padding: 15px;
+}
+
+.new-message-counter {
+    color: rgb(50, 90, 213);
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.user-container:hover {
+    border: 2px solid black;
+    cursor: default;
+}
+
+#public-chat-btn {
+    width: 100%;
+    min-height: 7.5vh;
+    border: 2px solid rgb(128, 128, 128, 0.2);
+    cursor: pointer;
+}
+
+.active-chat {
+    background-color: rgb(50, 90, 213);
+    color: white;
+}
+
+.dorment-chat {
+    background-color: rgb(243, 243, 243, 0.5);
+    color: rgb(89, 89, 89);
+}
+
+/* Styling of area where messages are displayed */
+
+.chatting {
+    min-height: 5vh;
+    background-color: rgba(211, 211, 211, 0.5);
+    vertical-align: middle;
+    padding: 10px;
+    text-align: center;
+    color: rgb(89, 89, 89);
+}
+
+#chat {
+    flex-grow: 2;
+}
+
+#messages {
+    display: flex;
+    padding: 20px;
+    padding-top: 0;
+    flex-direction: column;
+    border: 2px solid rgb(128, 128, 128, 0.2);
+    height: 82.5vh;
+    overflow-y: scroll;
+}
+
+.message-container {
+    padding: 10px 10px 10px 0px;
+    border-bottom: 2px solid rgb(128, 128, 128, 0.2);
+    position: relative;
+}
+
+.message {
+    height: auto;
+    vertical-align: middle;
+}
+
+.sender {
+    color: red;
+    display: inline-block;
+}
+
+.date {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    color: rgb(150, 138, 138);
+}
+
+/* Styling of area where messages are sent */
+
+#send-msg-area {
+    width: inherit;
+    min-height: 7.5vh;
+    padding: 1vh;
+    display: flex;
+    border: 1px solid rgb(128, 128, 128, 0.2);
+}
+
+#input-msg {
+    flex-grow: 1;
+    margin-right: 10px;
+    border: 0 none;
+    outline: none;
+    min-height: 5vh;
+    resize: none;
+    background-color: rgba(211, 211, 211, 0.5);
+}
+
+#send-msg-btn {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    align-self: center;
+    cursor: pointer;
+}
+
+#send-msg-img {
+    width: 30px;
+    height: 30px;
+    z-index: -1;
+}
+
+/* To hide/show elements */
+
+.hidden {
+    display: none;
+}
